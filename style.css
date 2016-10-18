@@ -5,4 +5,35 @@ body {
 
 .main-content {
 	width: 60%;
+	margin: auto;
+}
+
+.selection {
+	font-size: 18px;
+	text-align: center;
+	color: #888;
+}
+
+.selection .selectable-option {
+	display: inline-block;
+	padding: 12px;
+}
+
+.selection .selectable-option:hover {
+	cursor: pointer;
+	color: #bb0000;
+}
+
+#work-area {
+	font-size: 28px;
+	text-align: center;
+	padding: 36px;
+}
+
+#work-area .answer {
+	display: inline-block;
+}
+
+#work-area .question {
+	display: inline-block;
 }
