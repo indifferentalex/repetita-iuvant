@@ -36,11 +36,15 @@ body {
 	color: #222;
 }
 
+.work-area .suggestion {
+	font-size: 16px;
+}
+
 .work-area .answer {
 	display: inline-block;
 	text-align: center;
 	height: 30px;
-	min-width: 36px;
+	min-width: 18px;
 	outline: none;
 }
 
