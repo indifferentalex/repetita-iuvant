@@ -2,22 +2,25 @@
 	<title>Repetita Iuvant</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">	
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="interaction.js"></script>
 </head>
 <html>
 <body>
 <div class="main-content">
 	<div id="topic-select" class="selection">
-		<div class="selectable-option">Tutti</div>
+		<div class="selectable-option selected">Tutti</div>
 		<div class="selectable-option">Articoli</div>
 		<div class="selectable-option">Preposizioni</div>
 	</div>
-	<div id="work-area">
-		<div class="answer">Il</div>
+	<div id="work-area" class="work-area">
+		<div id="answer" class="answer" contenteditable="true">Il</div>
 		<div class="question">gatto con gli stivali</div>
 	</div>
 	<div id="mode-select" class="selection">
-		<div class="selectable-option">Practice</div>
+		<div class="selectable-option selected">Practice</div>
 		<div class="selectable-option">Test</div>
 	</div>
 </div>

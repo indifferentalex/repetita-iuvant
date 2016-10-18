@@ -21,19 +21,34 @@ body {
 
 .selection .selectable-option:hover {
 	cursor: pointer;
-	color: #bb0000;
+	color: #cc0000;
 }
 
-#work-area {
+.selection .selectable-option.selected {
+	color: #b30000;
+}
+
+.work-area {
 	font-size: 28px;
+	line-height: 30px;
 	text-align: center;
 	padding: 36px;
+	color: #222;
 }
 
-#work-area .answer {
+.work-area .answer {
 	display: inline-block;
+	text-align: center;
+	height: 30px;
+	min-width: 36px;
+	outline: none;
 }
 
-#work-area .question {
+.work-area .answer:empty:not(:focus) {
+	height: 29px;
+	border-bottom: 1px solid #222;
+}
+
+.work-area .question {
 	display: inline-block;
 }
