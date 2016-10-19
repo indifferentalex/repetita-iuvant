@@ -14,6 +14,10 @@ body {
 	color: #888;
 }
 
+.selection .select-option-wrapper {
+	display: inline-block;
+}
+
 .selection .selectable-option {
 	display: inline-block;
 	padding: 12px;
@@ -25,6 +29,28 @@ body {
 }
 
 .selection .selectable-option.selected {
+	color: #b30000;
+}
+
+.selection .selectable-option.nested-option {
+	display: inline-block;
+	color: #888;
+	padding: 0px 12px;
+}
+
+.selection .selectable-option.nested-option.hidden {
+	display: none;
+}
+
+.selection .selectable-option.nested-option:first-child {
+	padding-left: 24px;
+}
+
+.selection .selectable-option.nested-option:hover {
+	color: #cc0000;
+}
+
+.selection .selectable-option.nested-option.selected {
 	color: #b30000;
 }
 
