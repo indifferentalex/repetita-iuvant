@@ -74,6 +74,14 @@ body {
 	color: #888;
 }
 
+.work-area .suggestion.correct {
+	color: #1ed761;
+}
+
+.work-area .suggestion.wrong {
+	color: #cc0000;
+}
+
 .work-area .answer {
 	display: inline-block;
 	text-align: center;

@@ -71,6 +71,9 @@ jQuery(function() {
 		$("#option-category").html(option["suggestion"]);
 		$("#question").html(word["parola"]);
 
+		$("#useful-suggestion").removeClass("correct");
+		$("#useful-suggestion").removeClass("wrong");
+
 		if (word["singolare_plurale_uguale"] == true) {
 			$("#useful-suggestion").removeClass("faded");
 			$("#useful-suggestion").html(word["plurale"] == true ? "Versione Plurale" : "Versione Singolare");
@@ -78,6 +81,8 @@ jQuery(function() {
 			$("#useful-suggestion").addClass("faded");
 			$("#useful-suggestion").html("Ripetere ad alta voce aiuta a migliorare");
 		}
+
+		$("#answer").prop("contenteditable", true);
 	}
 
 	function checkAnswer(submitted) {
@@ -86,14 +91,20 @@ jQuery(function() {
 		}
 
 		if (word[option["key"]] == submitted) {
-			console.log("Correct");
+			$("#useful-suggestion").removeClass("faded");
+			$("#useful-suggestion").addClass("correct");
+			$("#useful-suggestion").html("Corretto!");
 
 			if (currentMode == "verifica") {
 				correctQuestions++;
 			}
 		} else {
-			console.log("Wrong");
+			$("#useful-suggestion").removeClass("faded");
+			$("#useful-suggestion").addClass("wrong");
+			$("#useful-suggestion").html("Sbagliato!");
 		}
+
+		$("#answer").prop("contenteditable", false);
 
 		if (currentMode == "verifica") {
 			$("#current-score").html(correctQuestions + "/" + totalQuestions);
@@ -133,7 +144,9 @@ jQuery(function() {
 
 			checkAnswer($("#answer").html());
 
-			loadWord();
+			setTimeout(function() {
+				loadWord();
+			}, 1500);
 		}
 	});
 });
