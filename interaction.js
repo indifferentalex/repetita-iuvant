@@ -68,8 +68,16 @@ jQuery(function() {
 		option = getValidOption(word["plurale"]);
 
 		$("#answer").html("");
-		$("#option-category").html(option["suggestion"] + (word["singolare_plurale_uguale"] == true ? (word["plurale"] == true ? " (P)" : " (S)") : ""));
+		$("#option-category").html(option["suggestion"]);
 		$("#question").html(word["parola"]);
+
+		if (word["singolare_plurale_uguale"] == true) {
+			$("#useful-suggestion").removeClass("faded");
+			$("#useful-suggestion").html(word["plurale"] == true ? "Versione Plurale" : "Versione Singolare");
+		} else {
+			$("#useful-suggestion").addClass("faded");
+			$("#useful-suggestion").html("Ripetere ad alta voce aiuta a migliorare");
+		}
 	}
 
 	function checkAnswer(submitted) {
